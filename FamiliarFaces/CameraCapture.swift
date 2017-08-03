@@ -53,7 +53,7 @@ class CameraCapture: NSObject {
     {
         guard cameraCapturePermission,
               let device =
-              AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera],
+            AVCaptureDevice.DiscoverySession(__deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera],
                                                mediaType: AVMediaType.video,
                                                position: AVCaptureDevice.Position.back).devices.first,
               let deviceInput = try? AVCaptureDeviceInput(device: device),

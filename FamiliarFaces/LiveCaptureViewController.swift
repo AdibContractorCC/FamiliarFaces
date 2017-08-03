@@ -17,7 +17,7 @@ class LiveCaptureViewController: UIViewController {
         super.viewDidLoad()
         cameraCapture.delegate = self
         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: cameraCapture.captureSession)
-        videoPreviewLayer!.videoGravity = AVLayerVideoGravity.resize
+        videoPreviewLayer!.videoGravity = AVLayerVideoGravity.resizeAspect
         videoPreviewLayer!.connection?.videoOrientation = AVCaptureVideoOrientation.landscapeRight
         view.layer.addSublayer(videoPreviewLayer!)
     }
